@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MusicProject</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="library">Library</string>
+    <string name="premium">Premium</string>
+    <string name="morning">Good morning</string>
+    <string name="podcast_zone">Podcast</string>
+    <string name="track_zone">Track</string>
+    <string name="artist_zone">Artist</string>
+</resources>
