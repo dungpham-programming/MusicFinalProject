@@ -13,4 +13,8 @@
     <style name="font_medium">
         <item name="android:fontFamily">@font/helvetica_neue_medium</item>
     </style>
+
+    <style name="TransparentIndicatorStyle">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 </resources>

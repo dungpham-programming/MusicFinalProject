@@ -38,8 +38,8 @@ dependencies {
     androidTestImplementation libs.espresso.core
     implementation libs.glide                   // Thêm thư viện glide để hiển thị ảnh từ Internet
     annotationProcessor libs.compiler
-    implementation libs.material.v140
     implementation libs.gson                    // gson để chuyển đổi JSON về Object
     implementation libs.retrofit                // Retrofit cung cấp các HTTP method
     implementation libs.retrofit2.converter.gson         // Convert Object sang JSON cung cấp bởi Retrofit
+    implementation libs.material
 }

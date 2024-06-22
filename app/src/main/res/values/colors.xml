@@ -3,4 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="deep_gray">#B3B3B3</color>
+    <color name="selected_color">#1DB954</color> <!-- Màu khi mục được chọn -->
 </resources>

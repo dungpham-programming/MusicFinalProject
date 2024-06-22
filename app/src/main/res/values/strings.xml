@@ -8,4 +8,6 @@
     <string name="podcast_zone">Podcast</string>
     <string name="track_zone">Track</string>
     <string name="artist_zone">Artist</string>
+    <string name="saved_track">Saved Track</string>
+    <string name="play_pause">play_pause</string>
 </resources>

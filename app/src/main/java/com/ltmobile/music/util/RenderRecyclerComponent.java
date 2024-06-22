@@ -3,7 +3,9 @@ package com.ltmobile.music.util;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
+import android.view.View;
 
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,16 +17,16 @@ import java.util.List;
 
 public class RenderRecyclerComponent {
     // Tạo RecyclerView và thiết lập LayoutManager
-    public static List<RecyclerView> renderRecyclerViews(Context context, int ...recyclerViewIds) {
+    public static List<RecyclerView> renderRecyclerViews(View view, int ...recyclerViewIds) {
         List<RecyclerView> recyclerViews = new ArrayList<>();
         for (Integer idView : recyclerViewIds) {
-            RecyclerView recyclerView = ((Activity) context).findViewById(idView);
+            RecyclerView recyclerView = view.findViewById(idView);
 //            if (recyclerView == null) {
 //                Log.e("RenderRecyclerComponent", "RecyclerView ID không tìm thấy: " + idView);
 //                continue;
 //            }
             // Lấy ra context và setLayoutManager
-            recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+            recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false));
             recyclerViews.add(recyclerView);
         }
         return recyclerViews;
