@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.ltmobile.music'
+    namespace 'com.mue.music'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.ltmobile.music"
+        applicationId "com.mue.music"
         minSdk 24
         targetSdk 34
         versionCode 1
