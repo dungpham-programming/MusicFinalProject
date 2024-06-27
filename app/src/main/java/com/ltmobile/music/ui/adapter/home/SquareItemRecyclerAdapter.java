@@ -1,4 +1,4 @@
-package com.ltmobile.music.ui.adapter;
+package com.ltmobile.music.ui.adapter.home;
 
 import android.view.LayoutInflater;
 import android.view.View;

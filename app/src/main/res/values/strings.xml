@@ -9,5 +9,14 @@
     <string name="track_zone">Track</string>
     <string name="artist_zone">Artist</string>
     <string name="saved_track">Saved Track</string>
-    <string name="play_pause">play_pause</string>
+    <string name="play">Play</string>
+    <string name="search_hint">What do you want to listen to?</string>
+    <string name="podcast">Podcast</string>
+    <string name="track">Track</string>
+    <string name="no_result">Oops. No Results Found</string>
+    <string name="fav_unchecked">Favorite Unchecked</string>
+    <string name="fav_checked">Favorite Checked</string>
+    <string name="artist">Artist</string>
+    <string name="album">Album</string>
+    <string name="you_liked">You Liked</string>
 </resources>

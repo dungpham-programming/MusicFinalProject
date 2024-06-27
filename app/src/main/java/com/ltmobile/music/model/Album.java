@@ -2,25 +2,20 @@ package com.ltmobile.music.model;
 
 import com.ltmobile.music.model.abs.BaseApiModel;
 
-public class Track extends BaseApiModel {
+public class Album extends BaseApiModel {
     private String artist;
     private long categoryId;
 
-    public Track() {
-    }
+    public Album() {}
 
-    public Track(String id, String name) {
-        super(id, name);
-    }
-
-    public Track(String id, long categoryId, String name, String artist) {
+    public Album(String id, long categoryId, String name, String artist) {
         super(id, name);
         this.artist = artist;
         this.categoryId = categoryId;
     }
 
     public String getArtist() {
-        return this.artist;
+        return artist;
     }
 
     public void setArtist(String artist) {

@@ -1,17 +1,17 @@
 package com.ltmobile.music.model.abs;
 
-public abstract class BaseModel {
-    private String id;
-    private String name;
+public abstract class BaseApiModel {
+    protected String id;
+    protected String name;
 
     public String getId() {
         return id;
     }
 
-    public BaseModel() {
+    public BaseApiModel() {
     }
 
-    public BaseModel(String id, String name) {
+    public BaseApiModel(String id, String name) {
         this.id = id;
         this.name = name;
     }

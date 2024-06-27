@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ltmobile.music.R;
-import com.ltmobile.music.util.RenderRecyclerComponent;
+import com.ltmobile.music.util.RenderRecyclerComponentUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,6 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
     public HomeFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -45,22 +44,26 @@ public class HomeFragment extends Fragment {
         List<String> artistUrlList = new ArrayList<>();
         artistUrlList.add("https://i.scdn.co/image/ab6761610000e5eb8de0c8ed480aabd579520b48");
 
+        List<String> savedUrlList = new ArrayList<>();
+        savedUrlList.add("https://i.scdn.co/image/ab67616d0000b2738cb0cde7228e1cf1b728c635");
+
         // Render ra các RecyclerView có image là hình vuông (Đã viết một util chung để render)
-        List<RecyclerView> squareRecyclerViews = RenderRecyclerComponent.renderRecyclerViews(view,
-                R.id.podcast_recycler_view, R.id.track_recycler_view);
+        List<RecyclerView> squareRecyclerViews = RenderRecyclerComponentUtil.renderRecyclerViews(view,
+                R.id.podcast_recycler_view, R.id.track_recycler_view, R.id.saved_track_recycler_view );
         List<List<String>> squareImageList = new ArrayList<>();
         squareImageList.add(podcastUrlList);
         squareImageList.add(trackUrlList);
+        squareImageList.add(savedUrlList);
 
-        List<RecyclerView> circleRecyclerViews = RenderRecyclerComponent.renderRecyclerViews(view, R.id.artist_recycler_view);
+        List<RecyclerView> circleRecyclerViews = RenderRecyclerComponentUtil.renderRecyclerViews(view, R.id.artist_recycler_view);
         List<List<String>> circleImageList = new ArrayList<>();
         circleImageList.add(artistUrlList);
 
         // Khởi tạo Adapter và set Adapter cho các RecyclerView
         // (đối với các item có hình vuông như Track, Podcast)
-        RenderRecyclerComponent.setAdapterForSquareItem(squareImageList, squareRecyclerViews, R.layout.podcast_item, R.layout.track_item);
+        RenderRecyclerComponentUtil.setAdapterForSquareItem(squareImageList, squareRecyclerViews, R.layout.album_item, R.layout.track_item, R.layout.saved_item);
 
         // (đối với các item có hình tròn như Artist)
-        RenderRecyclerComponent.setAdapterForCircleItem(circleImageList, circleRecyclerViews, R.layout.artist_item);
+        RenderRecyclerComponentUtil.setAdapterForCircleItem(circleImageList, circleRecyclerViews, R.layout.artist_item);
     }
 }

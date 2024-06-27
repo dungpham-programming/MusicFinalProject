@@ -70,14 +70,49 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/play_pause_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/fav_checked"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/fav_checked"
+                android:src="@drawable/ic_like_checked"
+                android:visibility="gone"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/fav_unchecked"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/fav_unchecked"
+                android:src="@drawable/ic_like_unchecked"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="4dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/play_pause"
+                android:contentDescription="@string/play"
                 android:src="@drawable/ic_play"
+                android:visibility="gone"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/pause"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/play"
+                android:src="@drawable/ic_pause"
                 tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>
