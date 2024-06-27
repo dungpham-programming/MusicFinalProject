@@ -101,7 +101,6 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/play"
                 android:src="@drawable/ic_play"
-                android:visibility="gone"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <ImageButton
@@ -113,6 +112,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/play"
                 android:src="@drawable/ic_pause"
+                android:visibility="gone"
                 tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>

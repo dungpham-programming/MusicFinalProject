@@ -1,5 +1,6 @@
 package com.mue.music.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -11,19 +12,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mue.music.R;
+import com.mue.music.ui.activity.MusicPlayerActivity;
 import com.mue.music.ui.fragment.HomeFragment;
+import com.mue.music.ui.fragment.MusicPlayerFragment;
 import com.mue.music.ui.fragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
-    private FrameLayout container;
     private ImageButton favUncheckBtn;
     private ImageButton favCheckBtn;
     private ImageButton playBtn;
     private ImageButton pauseBtn;
+    private View musicPlayerBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
         this.setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
-        container = findViewById(R.id.fragment_container);
         favUncheckBtn = findViewById(R.id.fav_unchecked);
         favCheckBtn = findViewById(R.id.fav_checked);
         playBtn = findViewById(R.id.play);
         pauseBtn = findViewById(R.id.pause);
+        musicPlayerBar = findViewById(R.id.music_player_bar);
 
         // Load HomeFragment ngay trong lần đầu tiên,
         // kiểm tra trạng thái trước đó từ param Bundle để xem fragment này đã load lần đầu tiên hay chưa
@@ -83,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
             playBtn.setVisibility(View.VISIBLE);
             pauseBtn.setVisibility(View.GONE);
         });
+
+        // Set sự kiện hiển thị Music Player Fragment khi bấm vào Music Player Bar
+        musicPlayerBar.setOnClickListener(v -> {
+            openMusicPlayer();
+        });
     }
 
     private void loadFragment(Fragment fragment) {
@@ -97,5 +106,10 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, fragment)
                 .commit();
+    }
+
+    private void openMusicPlayer() {
+        Intent intent = new Intent(this, MusicPlayerActivity.class);
+        startActivity(intent);
     }
 }
