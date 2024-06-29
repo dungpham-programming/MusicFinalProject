@@ -1,6 +1,6 @@
-package com.mue.music.model_test;
+package com.mue.music.model_test_ui;
 
-import com.mue.music.model_test.abs.BaseSqliteModel;
+import com.mue.music.model_test_ui.abs.BaseSqliteModel;
 
 public class Category extends BaseSqliteModel {
     private String description;

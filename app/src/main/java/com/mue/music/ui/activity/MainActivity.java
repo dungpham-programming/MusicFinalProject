@@ -1,9 +1,8 @@
-package com.mue.music.ui;
+package com.mue.music.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -12,13 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mue.music.R;
-import com.mue.music.ui.activity.MusicPlayerActivity;
 import com.mue.music.ui.fragment.HomeFragment;
-import com.mue.music.ui.fragment.MusicPlayerFragment;
 import com.mue.music.ui.fragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {

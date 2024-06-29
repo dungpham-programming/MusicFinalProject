@@ -10,7 +10,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mue.music.R;
-import com.mue.music.model_test.Category;
+import com.mue.music.model_test_ui.Category;
 
 import java.util.List;
 

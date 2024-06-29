@@ -1,4 +1,4 @@
-package com.mue.music.model_test.abs;
+package com.mue.music.model_test_ui.abs;
 
 public abstract class BaseApiModel {
     protected String id;

@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mue.music.R;
-import com.mue.music.model_test.Album;
+import com.mue.music.model_test_ui.Album;
 
 import java.util.List;
 

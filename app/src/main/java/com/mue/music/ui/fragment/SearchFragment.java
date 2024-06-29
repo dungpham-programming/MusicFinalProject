@@ -17,10 +17,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mue.music.R;
-import com.mue.music.model_test.Album;
-import com.mue.music.model_test.Artist;
-import com.mue.music.model_test.Category;
-import com.mue.music.model_test.Track;
+import com.mue.music.model_test_ui.Album;
+import com.mue.music.model_test_ui.Artist;
+import com.mue.music.model_test_ui.Category;
+import com.mue.music.model_test_ui.Track;
 import com.mue.music.ui.adapter.search.AlbumAdapter;
 import com.mue.music.ui.adapter.search.ArtistAdapter;
 import com.mue.music.ui.adapter.search.CategoryAdapter;

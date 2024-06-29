@@ -27,28 +27,28 @@ public class MusicDatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    private void fillInitialData(SQLiteDatabase db) {
-        // Kiểm tra và chèn dữ liệu mẫu
-        Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM " + DatabaseProps.TABLE_CATEGORIES, null);
-        if (cursor.moveToFirst() && cursor.getInt(0) == 0) {
-            insertCategory(db, "Track", R.color.green);
-            insertCategory(db, "Podcast", R.color.purple);
-            insertCategory(db, "Saved Track", R.color.pink);
-            insertCategory(db, "Artist", R.color.red);
-            insertCategory(db, "Discover", R.color.blue);
-            insertCategory(db, "Live Events", R.color.violet);
-            insertCategory(db, "Bollywood", R.color.purple_light);
-            insertCategory(db, "Punjabi", R.color.red_dark);
-            insertCategory(db, "Tamil", R.color.blue_dark);
-            insertCategory(db, "Telugu", R.color.purple_light);
-        }
-        cursor.close();
-    }
-
-    private void insertCategory(SQLiteDatabase db, String name, int color) {
-        ContentValues values = new ContentValues();
-        values.put(DatabaseProps.COLUMN_NAME, name);
-        values.put(DatabaseProps.COLUMN_COLOR, color);
-        db.insert(DatabaseProps.TABLE_CATEGORIES, null, values);
-    }
+//    private void fillInitialData(SQLiteDatabase db) {
+//        // Kiểm tra và chèn dữ liệu mẫu
+//        Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM " + DatabaseProps.TABLE_CATEGORIES, null);
+//        if (cursor.moveToFirst() && cursor.getInt(0) == 0) {
+//            insertCategory(db, "Track", R.color.green);
+//            insertCategory(db, "Podcast", R.color.purple);
+//            insertCategory(db, "Saved Track", R.color.pink);
+//            insertCategory(db, "Artist", R.color.red);
+//            insertCategory(db, "Discover", R.color.blue);
+//            insertCategory(db, "Live Events", R.color.violet);
+//            insertCategory(db, "Bollywood", R.color.purple_light);
+//            insertCategory(db, "Punjabi", R.color.red_dark);
+//            insertCategory(db, "Tamil", R.color.blue_dark);
+//            insertCategory(db, "Telugu", R.color.purple_light);
+//        }
+//        cursor.close();
+//    }
+//
+//    private void insertCategory(SQLiteDatabase db, String name, int color) {
+//        ContentValues values = new ContentValues();
+//        values.put(DatabaseProps.COLUMN_NAME, name);
+//        values.put(DatabaseProps.COLUMN_COLOR, color);
+//        db.insert(DatabaseProps.TABLE_CATEGORIES, null, values);
+//    }
 }

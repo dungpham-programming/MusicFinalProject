@@ -1,6 +1,6 @@
-package com.mue.music.model_test;
+package com.mue.music.model_test_ui;
 
-import com.mue.music.model_test.abs.BaseApiModel;
+import com.mue.music.model_test_ui.abs.BaseApiModel;
 
 import java.util.List;
 
