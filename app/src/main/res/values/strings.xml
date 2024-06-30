@@ -19,4 +19,6 @@
     <string name="artist">Artist</string>
     <string name="album">Album</string>
     <string name="you_liked">You Liked</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="sign_up_now">Don\'t have an account? Sign up now!</string>
 </resources>
